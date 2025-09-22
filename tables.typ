@@ -5,7 +5,7 @@
   table(
     columns: 4,
     table.header(
-      [Equipo], [Costo (MXN)], [Proveedor], [Link]
+      [*Equipo*], [*Costo* (MXN)], [*Proveedor*], [*Link*]
     ),
     ..csv_table.flatten()
   ),
