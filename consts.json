@@ -18,5 +18,10 @@
       "classroom_quantity": 4
     },
     "devices_per_person": 2
+  },
+  "topography": {
+    "min_height": 1902.994140625,
+    "max_height": 1950,
+    "mean": 1929.4575462724
   }
 }
