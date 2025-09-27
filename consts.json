@@ -1,5 +1,7 @@
 {
   "budget": 490200,
+  "building_levels": 3,
+  "cctv_cameras_per_level": 4,
   "company_activities": [
     "TELECOMUNICACIONES",
     "FIBRA OPTICA",
