@@ -9,7 +9,6 @@
     #let y_coords = range(800, 0, step: -31)
     #let heatmap = lq.colormesh(
       x_coords, y_coords, map_data.rev(),
-      interpolation: "smooth",
       map: gradient.linear(rgb(0, 0, 0), rgb(255,255,255))
     )
     #figure([
