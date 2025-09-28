@@ -13,7 +13,7 @@
       map: gradient.linear(rgb(0, 0, 0), rgb(255,255,255))
     )
     #figure([
-      #lq.diagram(width: 3.285cm, height: 4cm, heatmap,
+      #lq.diagram(heatmap,
       lq.plot(
         (282, 320), (244, 434),
         stroke: none,
