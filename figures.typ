@@ -25,7 +25,7 @@
         map: gradient.linear(rgb(255, 255, 255), rgb(0,0,0),)
       )
       #lq.colorbar(heatmap)
-    ]),
+    ],
     caption: [Mapa de calor de altura de la zona. Datos extraidos de #cite(<topomap>, form: "prose")]
   ) <heatmap>
 ],
