@@ -2,6 +2,11 @@
 #import "tables.typ": tables
 #let consts = json("consts.json")
 #import "@preview/oxifmt:1.0.0": strfmt
+#let appendix(body) = {
+  set heading(numbering: "A", supplement: [Appendix])
+  counter(heading).update(0)
+  body
+}
 #let money_format_mxn(number) = strfmt("${} MXN", number, fmt-thousands-separator: ",")
 #let total_items_cost = csv("items.csv").map(row => decimal(row.at(1)) * decimal(row.at(2))).sum()
 #let total_hosts = (( (consts.host_calc.capacity_a.student_number + consts.host_calc.capacity_a.teacher_number) * consts.host_calc.devices_per_person ) * consts.host_calc.capacity_a.classroom_quantity) + (( (consts.host_calc.capacity_b.student_number + consts.host_calc.capacity_b.teacher_number) * consts.host_calc.devices_per_person ) * consts.host_calc.capacity_b.classroom_quantity) + (consts.building_levels * consts.cctv_cameras_per_level) + (consts.voip_phones_per_level * consts.building_levels)
