@@ -29,4 +29,19 @@
     caption: [Mapa de calor de altura de la zona. Datos extraidos de #cite(<topomap>, form: "prose")]
   ) <heatmap>
 ],
+distance_triangle: [
+  #figure(
+  cetz.canvas({
+    import cetz.draw: *
+    scale(x: 0.08, y: 0.08)
+    line((0,0), (building_distance,0))       // base
+    content((building_distance /2, -0.5), text([#building_distance m]), anchor: "north")
+    line((0,0), (0,10))       // height
+    content((-0.5, 5), text([10 m]), anchor: "east")
+    line((0,10), (building_distance,0))       // hypotenuse
+    content((building_distance / 2, 7), anchor: "south", text([#calc.round(calc.sqrt(calc.pow(10,2) + calc.pow(building_distance,2)), digits: 3) m]))
+  }),
+  caption: [Triángulo representando distancia entre edificios]
+  )
+]
 )

@@ -42,6 +42,7 @@ Se busca diseñar una red para el edificio de aulas (edificio A), de la Facultad
 Para calcular la elevación sobre el nivel del mar del área donde se encuentran los edificios, se utilizó la herramienta de OpenTopography para conseguir los datos geográficos en el área (ver @heatmap)#footnote[El _dataset_ de altitudes será público desde el #link("https://github.com/jmacias1503/proyecto-final-redes")[repositorio del documento]].
 #figures.heatmap_height
 Para el desarrollo de @heatmap, se trazaron bloques de aproximadamente 30m#super[2] desde el punto geográfico 20° 42' 22.9981'' latitud norte y 100° 26' 47.7999'' longitud oeste, 26 bloques en vertical de norte a sur y 23 bloques en horizontal de oeste a este. La posición de los edificios se determinó desde el trazado al punto de origen en Google Earth @maciasearth. Al medir su valor hexadecimal de color de cada punto, se calculó que el edificio A (punto inferior) tiene una diferencia de 10m con el edificio de innovación (punto superior).
+#figures.distance_triangle
 
 El suelo permitirá que parte del cableado de fibra óptica permita estar bajo tierra para su mayor protección de los agentes externos (estudiantes, humedad, vientos, lluvias, rayos solares, etc.), sin embargo, parte de este tendrá que ser expuesto debido al desconocimiento estructural de ambos edificios en su cimentación
 = Cronograma
