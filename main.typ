@@ -61,3 +61,11 @@ El costo total es de #money_format_mxn(calc.round(total_items_cost, digits: 2)).
 == Mano de Obra
 #pagebreak()
 #bibliography("sources.bib", style: "apa")
+#show: appendix
+= Dataset de Altitudes
+#let dataset = read("./output_USGS30m.asc")
+#figure([
+  #text(4pt)[
+    #raw(dataset)]],
+    caption: [Dataset de altitudes de la zona]
+  )
