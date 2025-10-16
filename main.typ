@@ -16,7 +16,20 @@
 = Introducción
 Se busca diseñar una red para el edificio de aulas (edificio A), de la Facultad de Informática (FIF) de la Universidad Autónoma de Querétaro (UAQ), la cual permita una red estable, segura y confiable con los conocimientos adquiridos en la clase de Diseño y Soporte de Redes
 == Resumen del Caso
-Se tiene un presupuesto de #money_format_mxn(consts.budget), con el cual se pretende implementar la red del edificio A
+Se tiene un presupuesto de #money_format_mxn(consts.budget), con el cual se pretende implementar la red del edificio A. Con los conocimientos adquiridos en clase, se tienen que implementar los siguientes requerimientos:
+- Presupuesto: #money_format_mxn(consts.budget)
+  - Hacer una conexión entre el edificio hacia el edificio de innovación
+    - El enlace será de fibra óptica (son más de 100 metros, medido desde OSM)
+  - 1 nodo por cuarto (27 salones)
+  - Red inalámbrica separada en:
+    - Alumnos
+    - Docentes
+  - 4 Cámaras CCTV por piso (12 total)
+  - Buscar lugar para el site
+  - Poner teléfono VoIP para los siguientes cuartos:
+    - Oficina SEFI
+    - Oficina César
+    - Sala de maestros
 = Análisis del Caso
 == Edificio
 Desde el programa de mapeo para OpenStreetMap, JOSM, utilizando su utilidad de medición, el área del edificio se calcula en alrededor de 200m#super[2] @OpenStreetMap. Cada nivel del edificio contará con su propio switch
