@@ -53,39 +53,37 @@ El documento describirá el diseño de una red para el edificio de salones (A), 
 
 Esta es la lista de tareas organizada según las secciones de un reporte técnico formal.
 
-### `[ ]` Preliminares
-- [ ] **Portada:** (Siguiendo formato APA 7 y requerimientos de la universidad).
-- [ ] **Índice / Tabla de Contenidos:** (Generado automáticamente por LaTeX).
+### Propuesta y Diseño
+- [ ] Cableado a utilizar.
+- [ ] Equipo activo.
+- [ ] Equipo pasivo.
+- [ ] Metodología.
+- [ ] Tabla de direccionamiento IP.
+- [ ] Tamaño de la red (tipo de red).
+- [ ] Diagrama de red.
+- [ ] Diagrama de cableado estructurado o conexiones conforme a ANSI/TIA 606 Y 568.
+- [ ] Topología de red a utilizar.
+- [ ] Diagrama de conexiones del rack a utilizar (Debe incluir el detalle de todo el material que se vaya a utilizar para su acomodo y conexión)
+- [ ] Cotización: Entregar una lista con todo el material a utilizar (agregar costo de mano de obra).
+- [ ] Identificación y etiquetado del cableado y del equipo activo.
+- [ ] Cronograma de actividades.
 
-### `[ ]` Capítulo 3: Propuesta de Diseño de Red (Desarrollo)
-- [ ] **Análisis de Requerimientos:** (Detalle de las consideraciones: 3 pisos, 5 VoIP, 4 CCTV/piso, WiFi dual).
-- [ ] **Topología de Red:** (Diagrama y justificación de topología física y lógica).
-- [ ] **Diseño Jerárquico de Red:**
-    - [ ] Diagrama de Red (Especificar capas de **Núcleo, Distribución y Acceso**).
-- [ ] **Plan de Direccionamiento IP:**
-    - [ ] Tabla de direccionamiento (IPv4/IPv6).
-    - [ ] Diseño de Subredes y **VLANs** (Para separación Alumnos/Docentes, VoIP, CCTV, etc.).
-- [ ] **Diseño de Cableado Estructurado:**
-    - [ ] **Cableado a utilizar:** (Tipo y categoría justificada, ej. Cat 6a).
-    - [ ] Diagrama de cableado (Conforme a ANSI/TIA 568).
-    - [ ] Ubicación del **site** (Justificación).
-- [ ] **Selección de Equipos:**
-    - [ ] **Equipo activo:** (Lista de switches, routers, APs, cámaras, teléfonos).
-    - [ ] **Equipo pasivo:** (Lista de rack, patch panels, patch cords, faceplates).
-- [ ] **Diagrama de Conexiones del Rack:** (Detalle de acomodo y conexiones).
-- [ ] **Identificación y Etiquetado:** (Definir el estándar de etiquetado según ANSI/TIA 606).
+### Configuraciones
+- [ ] Archivo en packet tracer con los equipos ya configurados y que incluyan los puntos que describe este documento.
+- [ ] Los teléfonos IP deben tener asignados una extensión diferente cada uno y deben de tener comunicación entre si. (Si aplica para su proyecto)
+- [ ] Las cámaras (CCTV) solamente deberán ser representas en el diagrama e incluir que direcciones IP tendrán. (Si aplica para su proyecto)
+- [ ] El equipo activo debe contar con las configuraciones básicas:
+    - [ ] Password con encriptación.
+    - [ ] Hostname (identificador)
+    - [ ] Dirección IPv4
+- [ ] Indicar como se dividirán las VLAN y configurarlas en los switches.
+- [ ] Encontrar mediante una app para analizar el wifi, en el edificio que se les fue asignado, buscar mejoras que se le puedan hacer a la red actual. Encontrar el canal más eficiente. Analizar la cobertura de wifi todo el edificio. Pueden agregar algún indicador más que consideren pertinente. Agregar al entregable final.
+- [ ] Recomendar un equipo para certificación de cable UTP (Poner precio pero no agregar a la cotización general) y agregar reportes ficticios de pruebas de fibra óptica y cable de cobre UTP a su entregable final.
 
-### `[ ]` Capítulo 4: Gestión y Cotización del Proyecto
-- [ ] **Cotización:**
-    - [ ] Lista detallada de todo el material y equipo.
-    - [ ] Costo de mano de obra.
-    - [ ] Costo total (Validar contra presupuesto de **$490,200 MXN**).
-- [ ] **Cronograma de Actividades:** (Plan de implementación por fases).
+### Monitoreo y Análisis de Red
 
-### `[ ]` Capítulo 5: Conclusiones
-- [ ] **Conclusiones del diseño:** (Resumen de la solución propuesta).
-- [ ] **Recomendaciones y Trabajo Futuro.**
+### Implementación de Seguridad
 
-### `[ ]` Secciones Finales
-- [ ] **Referencias:** (Lista de todas las fuentes citadas en formato APA 7).
-- [ ] **Apéndices:** (Opcional, para cotizaciones detalladas, diagramas a gran escala, etc.).
+### Administración de Fallas
+
+### Calidad en el Servicio
