@@ -55,19 +55,7 @@ Esta es la lista de tareas organizada según las secciones de un reporte técnic
 
 ### `[ ]` Preliminares
 - [ ] **Portada:** (Siguiendo formato APA 7 y requerimientos de la universidad).
-- [ ] **Resumen (Abstract):** (Breve descripción del proyecto, objetivos y solución propuesta).
 - [ ] **Índice / Tabla de Contenidos:** (Generado automáticamente por LaTeX).
-
-### `[ ]` Capítulo 1: Introducción
-- [ ] **Planteamiento del Problema:** (Necesidad de la red en el Edificio A, basado en el contexto).
-- [ ] **Justificación:** (Importancia del proyecto).
-- [ ] **Objetivos:** (General y específicos).
-- [ ] **Alcance y Limitaciones:** (Qué incluye y qué no incluye el diseño).
-
-### `[ ]` Capítulo 2: Marco Teórico y Metodología
-- [ ] **Fundamentos Teóricos:** (Conceptos clave: Topologías, modelo jerárquico, estándares, etc.).
-- [ ] **Metodología de Diseño:** (Describir la metodología seleccionada, ej. PPDIOO, Top-Down).
-- [ ] **Estándares a Utilizar:** (Mención y justificación de ANSI/TIA 568 y 606).
 
 ### `[ ]` Capítulo 3: Propuesta de Diseño de Red (Desarrollo)
 - [ ] **Análisis de Requerimientos:** (Detalle de las consideraciones: 3 pisos, 5 VoIP, 4 CCTV/piso, WiFi dual).
