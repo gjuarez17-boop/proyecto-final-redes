@@ -1,74 +1,30 @@
-\documentclass[letterpaper, 12pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern} 
-\usepackage{times} 
-\usepackage[spanish]{babel}
-\usepackage[margin=2.5cm]{geometry}
-\usepackage{setspace}
-\doublespacing
-\usepackage{indentfirst}
-\setlength{\parindent}{0.5in} 
-\usepackage[hidelinks]{hyperref}
+Selección de Cableado 
 
+Para el diseño de la red del Edificio de salones (A) , se ha seleccionado una arquitectura de cableado estructurado que prioriza el requisito de una red "muy estable" , respetando al mismo tiempo la limitación de "Bajo presupuesto". La selección se divide en tres segmentos principales:
 
+1. Cableado Horizontal
+Cable Seleccionado: Cable de Par Trenzado No Blindado (UTP) Categoría 6 (Cat 6).
+Justificación:
+Costo-Beneficio: Cat 6 ofrece el mejor balance entre rendimiento y costo para un presupuesto ajustado, superando a Cat 5e en fiabilidad a largo plazo.
 
-\title{Proyecto Final: Diseño y Soporte de Redes \\ Edificio de salones (A)}
-\author{Equipo 2}
-\date{\today}
+Ancho de Banda: Proporciona un ancho de banda de 1 Gbps, más que suficiente para cumplir con el requisito de "un nodo por cuarto".
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% INICIO DEL DOCUMENTO
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{document}
-	
-	% Descomente la siguiente línea si quiere una portada
-	% \maketitle
-	
-	% Use \section{}, \subsection{}, etc. para estructurar
-	\section{Fase 1: Planeación y Diseño}
-	
-	\subsection{Selección de Cableado}
-	
-	Para el diseño de la red del \textbf{Edificio de salones (A)}, se ha seleccionado una arquitectura de cableado estructurado que prioriza el requisito de una \textbf{red ``muy estable''}, respetando al mismo tiempo la limitación de \textbf{``Bajo presupuesto''}. La selección se divide en tres segmentos principales:
-	
-	\subsubsection{Cableado Horizontal}
-	
-	\begin{itemize}
-		\item \textbf{Cable Seleccionado:} Cable de Par Trenzado No Blindado (UTP) \textbf{Categoría 6 (Cat 6)}.
-		
-		\item \textbf{Justificación:}
-		\begin{itemize}
-			\item \textbf{Costo-Beneficio:} Cat 6 ofrece el mejor balance entre rendimiento y costo para un presupuesto ajustado, superando a Cat 5e en fiabilidad a largo plazo.
-			\item \textbf{Ancho de Banda:} Proporciona un ancho de banda de 1 Gbps, más que suficiente para cumplir con el requisito de ``un nodo por cuarto''.
-			\item \textbf{Soporte PoE:} Es fundamental para la alimentación eficiente de los dispositivos IP requeridos, como las ``4 cámaras por piso (CCTV)'' y los ``teléfono[s] VoIP'' de las oficinas centrales, eliminando la necesidad de fuentes de alimentación eléctrica individuales.
-		\end{itemize}
-	\end{itemize}
-	
-	\subsubsection{Cableado Vertical (Backbone del Edificio)}
-	
-	\begin{itemize}
-		\item \textbf{Cable Seleccionado:} Fibra Óptica \textbf{Duplex Multimodo OM3} (50/125 $\mu$m).
-		
-		\item \textbf{Justificación:}
-		\begin{itemize}
-			\item \textbf{Alta Estabilidad y Velocidad:} Para garantizar una red ``muy estable'', el backbone que interconecta los switches de cada piso debe ser de alta capacidad. La fibra OM3 permite enlaces de 10 Gbps (e incluso 40 Gbps) en distancias cortas, eliminando cuellos de botella.
-			\item \textbf{Inmunidad a Interferencia:} Al ser fibra óptica, es completamente inmune a la interferencia electromagnética (EMI), lo que es vital en un edificio con múltiples instalaciones eléctricas.
-		\end{itemize}
-	\end{itemize}
-	
-	\subsubsection{Conexión Inter-edificio (Enlace a Edificio de Innovación)}
-	
-	\begin{itemize}
-		\item \textbf{Cable Seleccionado:} Fibra Óptica \textbf{Duplex Multimodo OM3, de tipo Armado} para exteriores.
-		
-		\item \textbf{Justificación:}
-		\begin{itemize}
-			\item \textbf{Cumplimiento de Requisito:} Satisface la solicitud de ``Hacer una conexión entre el edificio de salones y el edificio de innovación''.
-			\item \textbf{Protección Física:} Se ha seleccionado una versión \textbf{armada} para proteger el enlace contra daños físicos, ya sea en canalización subterránea o aérea. Esta armadura lo protege de la compresión, la tensión y los roedores, asegurando la longevidad de la inversión.
-			\item \textbf{Rendimiento:} La fibra OM3 es adecuada para este enlace, asumiendo que la distancia al Edificio de Innovación es inferior a 300 metros para un enlace de 10 Gbps.
-		\end{itemize}
-	\end{itemize}
-	
-	
-\end{document}
+Soporte PoE: Es fundamental para la alimentación eficiente de los dispositivos IP requeridos, como las "4 cámaras por piso (CCTV)" y los "teléfono[s] VoIP"  de las oficinas centrales, eliminando la necesidad de fuentes de alimentación eléctrica individuales.
+
+2. Cableado Vertical (Backbone del Edificio)
+Cable Seleccionado: Fibra Óptica Duplex Multimodo OM3 (50/125 µm).
+
+Justificación:
+Alta Estabilidad y Velocidad: Para garantizar una red "muy estable", el backbone que interconecta los switches de cada piso debe ser de alta capacidad. La fibra OM3 permite enlaces de 10 Gbps (e incluso 40 Gbps) en distancias cortas, eliminando cuellos de botella.
+
+Inmunidad a Interferencia: Al ser fibra óptica, es completamente inmune a la interferencia electromagnética (EMI), lo que es vital en un edificio con múltiples instalaciones eléctricas.
+
+3. Conexión Inter-edificio (Enlace a Edificio de Innovación)
+Cable Seleccionado: Fibra Óptica Duplex Multimodo OM3, de tipo Armado para exteriores.
+
+Justificación:
+Cumplimiento de Requisito: Satisface la solicitud de "Hacer una conexión entre el edificio de salones y el edificio de innovación".
+
+Protección Física: Se ha seleccionado una versión armada para proteger el enlace contra daños físicos, ya sea en canalización subterránea o aérea. Esta armadura lo protege de la compresión, la tensión y los roedores, asegurando la longevidad de la inversión.
+
+Rendimiento: La fibra OM3 es adecuada para este enlace, asumiendo que la distancia al Edificio de Innovación es inferior a 300 metros para un enlace de 10 Gbps.
