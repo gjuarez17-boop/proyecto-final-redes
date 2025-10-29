@@ -1,57 +1,28 @@
+Metodología
+El diseño de la red hipotética para el Edificio de salones (A)  se gestionará utilizando la metodología del ciclo de vida de la red PPDIOO (Preparar, Planificar, Diseñar, Implementar, Operar y Optimizar). Esta metodología, vista en clase, proporciona un marco estructurado que asegura que se cumplan todos los requisitos técnicos y operativos del proyecto.
 
-\documentclass[letterpaper, 12pt]{article}
+El objetivo principal es usar este modelo para ejecutar de manera ordenada las seis fases de entrega definidas en el documento del proyecto. La correspondencia entre PPDIOO y las fases del proyecto será la siguiente:
 
-% Codificación y fuentes
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{times} 
-\usepackage[spanish]{babel}
-\usepackage{babel} 
-\usepackage[margin=2.5cm]{geometry}
-\usepackage{setspace}
-\doublespacing
-\usepackage{indentfirst}
-\setlength{\parindent}{0.5in}
-% Paquetes adicionales
-\usepackage{graphicx} % Para imágenes
-\usepackage[hidelinks]{hyperref} % Para enlaces (si es necesario)
-\usepackage{enumitem} % Para mejor control de listas
+Fase 1: Planeación y diseño  Esta fase se cubre con las tres primeras etapas de PPDIOO:
 
-\begin{document}
-	
-	\section{Metodología}
-	
-	El diseño de la red hipotética para el \textbf{Edificio de salones (A)} se gestionará utilizando la metodología del ciclo de vida de la red \textbf{PPDIOO} (Preparar, Planificar, Diseñar, Implementar, Operar y Optimizar). Esta metodología, vista en clase, proporciona un marco estructurado que asegura que se cumplan todos los requisitos técnicos y operativos del proyecto.
-	
-	El objetivo principal es usar este modelo para ejecutar de manera ordenada las \textbf{seis fases de entrega} definidas en el documento del proyecto. La correspondencia entre PPDIOO y las fases del proyecto será la siguiente:
-	
-	\begin{enumerate}
-		\item \textbf{Fase 1: Planeación y diseño} \\
-		Esta fase se cubre con las tres primeras etapas de PPDIOO:
-		\begin{itemize}
-			\item \textbf{Preparar (Prepare):} Se definen los objetivos del proyecto. En nuestro caso: diseñar la red del Edificio A con ``Bajo presupuesto'' (\textdollar 490,200), asegurar conectividad con el Edificio de Innovación, implementar CCTV, VoIP y una red inalámbrica ``muy estable''.
-			\item \textbf{Planificar (Plan):} Se identifican los recursos, se crea el cronograma de actividades y se detallan los costos de material y mano de obra para la cotización, asegurando no exceder el presupuesto.
-			\item \textbf{Diseñar (Design):} Se crea la solución técnica detallada, incluyendo la topología de red, selección de equipo activo y pasivo (Cat 6 y Fibra OM3), el diagrama de red, la tabla de direccionamiento IP y el diseño de la WLAN segmentada (alumnos/docentes).
-		\end{itemize}
-		
-		\item \textbf{Fase 2: Implementación de la red (configuraciones lógicas)} \\
-		Corresponde a la etapa \textbf{Implementar (Implement)} de PPDIOO. En este punto, se llevarán a cabo las configuraciones lógicas de los switches, routers y puntos de acceso (APs) según lo establecido en la fase de Diseño.
-		
-		\item \textbf{Fase 4: Implementación de seguridad} \\
-		Esta fase también es parte de la etapa \textbf{Implementar (Implement)}. Aquí se configuran las políticas de seguridad de la red, como la segmentación de la WLAN, la creación de VLANs (para alumnos, docentes, VoIP, CCTV) y las listas de control de acceso (ACLs) para proteger la red.
-		
-		\item \textbf{Fase 3: Monitoreo y análisis de la red} y \textbf{Fase 5: Administración de fallas} \\
-		Ambas fases del proyecto se engloban en la etapa \textbf{Operar (Operate)} de PPDIOO. Esta etapa se enfoca en la gestión diaria de la red, lo que incluye:
-		\begin{itemize}
-			\item El monitoreo constante para establecer un rendimiento base y detectar anomalías (Monitoreo y análisis).
-			\item La detección, diagnóstico y resolución proactiva de problemas (Administración de fallas) para mantener la red ``muy estable''.
-		\end{itemize}
-		
-		\item \textbf{Fase 6: Calidad en el servicio} \\
-		Esta fase final corresponde a la etapa \textbf{Optimizar (Optimize)} de PPDIOO. Una vez que la red está operativa y monitoreada, se implementarán políticas de Calidad de Servicio (QoS) para priorizar el tráfico sensible, como las llamadas de los teléfonos VoIP y el video de las cámaras CCTV, asegurando su correcto funcionamiento incluso bajo carga de red.
-	\end{enumerate}
-	
-	El uso de PPDIOO como metodología de trabajo nos asegura que cada entregable del proyecto sea un resultado lógico del ciclo de vida de la red.
-	
-\end{document}
+Preparar (Prepare): Se definen los objetivos del proyecto. En nuestro caso: diseñar la red del Edificio A con "Bajo presupuesto" ($490,200) , asegurar conectividad con el Edificio de Innovación , implementar CCTV , VoIP y una red inalámbrica "muy estable".
+
+Planificar (Plan): Se identifican los recursos, se crea el cronograma de actividades y se detallan los costos de material y mano de obra para la cotización, asegurando no exceder el presupuesto.
+
+Diseñar (Design): Se crea la solución técnica detallada, incluyendo la topología de red, selección de equipo activo y pasivo (Cat 6 y Fibra OM3), el diagrama de red, la tabla de direccionamiento IP y el diseño de la WLAN segmentada (alumnos/docentes).
+
+Fase 2: Implementación de la red (configuraciones lógicas)  Corresponde a la etapa Implementar (Implement) de PPDIOO. En este punto, se llevarán a cabo las configuraciones lógicas de los switches, routers y puntos de acceso (APs) según lo establecido en la fase de Diseño.
+
+Fase 4: Implementación de seguridad  Esta fase también es parte de la etapa Implementar (Implement). Aquí se configuran las políticas de seguridad de la red, como la segmentación de la WLAN, la creación de VLANs (para alumnos, docentes, VoIP, CCTV) y las listas de control de acceso (ACLs) para proteger la red.
+
+Fase 3: Monitoreo y análisis de la red y Fase 5: Administración de fallas  Ambas fases del proyecto se engloban en la etapa Operar (Operate) de PPDIOO. Esta etapa se enfoca en la gestión diaria de la red, lo que incluye:
+
+El monitoreo constante para establecer un rendimiento base y detectar anomalías (Monitoreo y análisis).
+
+La detección, diagnóstico y resolución proactiva de problemas (Administración de fallas) para mantener la red "muy estable".
+
+Fase 6: Calidad en el servicio  Esta fase final corresponde a la etapa Optimizar (Optimize) de PPDIOO. Una vez que la red está operativa y monitoreada, se implementarán políticas de Calidad de Servicio (QoS) para priorizar el tráfico sensible, como las llamadas de los teléfonos VoIP y el video de las cámaras CCTV, asegurando su correcto funcionamiento incluso bajo carga de red.
+
+
+
+El uso de PPDIOO como metodología de trabajo nos asegura que cada entregable del proyecto  sea un resultado lógico del ciclo de vida de la red.
