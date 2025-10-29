@@ -1,11 +1,20 @@
 Una vez listados los equipos necesarios, se listó la cotización de los equipos en la tabla %\ref{table:cotizacion}
-\begin{table}
+\begin{longtable}[c]{p{6cm}crr}
   %\label{table:cotizacion}
-  \caption{Tabla de cotizaciones}
-  \begin{tabular}{p{6cm}crr}
+  \caption{Tabla de cotizaciones}\\
       \hline
       \textbf{Material} & \textbf{Cantidad} & \textbf{Precio Unitario} & \textbf{Subtotal}\\
       \hline
+      \endfirsthead
+      \hline
+      \textbf{Material} & \textbf{Cantidad} & \textbf{Precio Unitario} & \textbf{Subtotal}\\
+      \hline
+      \endhead
+      \endfoot
+      \hline
+      \textbf{Total} & & & \$261,437.90 MXN\\
+      \hline
+      \endlastfoot
       \href{https://www.cyberpuerta.mx/Computo-Hardware/Redes/Switches/Switch-TP-Link-Gigabit-Ethernet-TL-SG2428P-24-Puertos-PoE-10-100-1000Mbps-4-Puertos-SFP-56-Gbit-s-8000-Entradas-Administrable.html}{Switch TP-Link TL-SG2428P 24 UTP 4 SFP PoE+ 250W} & 3 & \$5,549 MXN & \$16,647 MXN\\
       \href{https://www.cyberpuerta.mx/Computo-Hardware/Servidores/Accesorios-para-Servidores/Racks-y-Gabinetes/Enson-Gabinete-para-Pared-19-ENS-RKGB12U-12U-hasta-60kg.html}{Gabinete Enson ENS-RKGB12U} & 1 & \$2,949 MXN & \$2,949 MXN\\
       \href{https://www.cyberpuerta.mx/Computo-Hardware/Servidores/Accesorios-para-Servidores/Racks-y-Gabinetes/LinkedPRO-Rack-de-Pared-Abierto-de-19-8U-Negro.html}{LinkedPRO Rack de Pared 8U} & 2 & \$1,199 MXN & \$2,398 MXN\\
@@ -14,15 +23,16 @@ Una vez listados los equipos necesarios, se listó la cotización de los equipos
       \href{https://www.cyberpuerta.mx/Computo-Hardware/Redes/Access-Points/Access-Point-Open-Mesh-HPE-Networking-Instant-On-de-Banda-Dual-AP22-Inalambrico-1774-Mbit-s-1-Antena-Integrada-de-5-6dBi.html}{Access Point Aruba Instant On AP22 10.1W} & 9 & \$3,959 MXN & \$35,631 MXN\\
       \href{https://www.cyberpuerta.mx/Seguridad-y-Vigilancia/Camaras-y-Sistemas-de-Vigilancia/Camaras-de-Seguridad-IP/Ezviz-Camara-de-Seguridad-IP-Torreta-IR-para-Interiores-Exteriores-CS-H8C-3MP-POE-Alambrico-2304-x-1296-Pixeles-Dia-Noche.html}{Ezviz Cámara de Seguridad CS-H8C/3MP/POE 12W} & 12 & \$1,029 MXN & \$12,348 MXN\\
       \href{https://www.cyberpuerta.mx/Computo-Hardware/Cables/Bobinas/Bobinas-de-Cable-Ethernet/LinkedPRO-Bobina-de-Cable-Ethernet-Cat6-UTP-305-Metros-3.html?gad_source=1&gad_campaignid=22512493137&gbraid=0AAAAAD4nXn1OoM39AQ354wsCkyFu7PBmP&gclid=CjwKCAjw04HIBhB8EiwA8jGNbUPPV0I0JtFCylQ24yJ3d5XzZnZQm3WIaAlwiy4xL7B7PHQhPvgvgxoCArQQAvD_BwE}{Bobina Cable UTP Cat6 CMP 305m} & 5 & \$2,999 MXN & \$14,995 MXN\\
-      \href{https://intercompras.com/p/cable-fibra-optica-multimodo-om3-hilos-osp-planta-externa-armada-con-179193?gad_source=1&gad_campaignid=22545716102&gbraid=0AAAAAD_EkoERYzRK4CQeGjV1BPMO_Lp5g&gclid=CjwKCAjw04HIBhB8EiwA8jGNbXL5nsc7dDSC95clrzIuRDVBuVleEboXCpaVKtXbs6hBuy3eo5cH7BoCsWMQAvD_BwE}{Fibra Óptica 6 hilos OM3 Armado por metro} & 200 & \$87 MXN & \$17,400 MXN\\
+      \href{https://intercompras.com/p/cable-fibra-optica-multimodo-om3-hilos-osp-planta-externa-armada-con-179193?gad_source=1&gad_campaignid=22545716102&gbraid=0AAAAAD_EkoERYzRK4CQeGjV1BPMO_Lp5g&gclid=CjwKCAjw04HIBhB8EiwA8jGNbXL5nsc7dDSC95clrzIuRDVBuVleEboXCpaVKtXbs6hBuy3eo5cH7BoCsWMQAvD_BwE}{Fibra Óptica OM3 50/125 Armado 6 hilos (metro)} & 170 & \$87 MXN & \$14,790 MXN\\
+      \href{https://intercompras.com/p/cable-fibra-optica-multimodo-om3-hilos-osp-planta-externa-dielectrico-179340}{Fibra Óptica OM3 50/125 General 6 hilos (metro)} & 20 & \$57 MXN & \$1,140 MXN\\
       \href{https://www.cyberpuerta.mx/Energia/Proteccion-Contra-Descargas/No-Break-UPS/No-Break-UPS/No-Break-Tripp-Lite-by-Eaton-SmartPro-Rack-Tower-UPS-300W-500VA-Entrada-120V.html}{No Break Tripp Lite 300W 500VA 1U} & 3 & \$5,219 MXN & \$15,657 MXN\\
       \href{https://www.cyberpuerta.mx/Computo-Hardware/Cables/Accesorios-para-Cables/Jacks-de-Red/Intellinet-Jack-Categoria-6-RJ-45-Blanco.html}{Keystone Intellinet RJ-45 Cat6} & 33 & \$49 MXN & \$1,617 MXN\\
       \href{https://www.cyberpuerta.mx/Computo-Hardware/Cables/Accesorios-para-Cables/Tapas-y-Cajas/Intellinet-Tapa-para-Caja-Faceplate-163286-Montaje-al-Ras-1-Salida-Blanco.html}{Faceplate Intellinet 163286} & 33 & \$28 MXN & \$924 MXN\\
       \href{https://www.cyberpuerta.mx/Celulares-y-Telefonia/Telefonia-VoIP/Telefonos-VoIP/Grandstream-Telefono-IP-GXP1625-2-Lineas-3-Teclas-Programables-Altavoz-Negro.html}{Grandstream Teléfono IP GXP1625} & 5 & \$769 MXN & \$3,845 MXN\\
-      \href{https://www.cyberpuerta.mx/Energia/PDU-s/Saxxon-PDU-para-Rack-1U-SXPDU-12P16A-16A-125V-12-Salidas.html}{Saxxon PDU SXPDU-12P16A 1U 12 Salidas} & 3 & \$1,259 MXN & \$3777\\
-      \textbf{Mano de obra} & & & \$Muchillon MXN\\
-      \hline
-      \textbf{Total} & & & \$Muchillon MXN\\
-      \hline
-    \end{tabular}
-\end{table}
+      \href{https://www.cyberpuerta.mx/Energia/PDU-s/Saxxon-PDU-para-Rack-1U-SXPDU-12P16A-16A-125V-12-Salidas.html}{Saxxon PDU SXPDU-12P16A 1U 12 Salidas} & 3 & \$1,259 MXN & \$3,777 MXN\\
+      \href{https://www.cyberpuerta.mx/Energia/Tierra-Fisica-y-Pararrayos/Tierra-Fisica/LinkedPRO-Barra-de-Distribucion-de-Tierra-Fisica-para-Rack-19-Cobre.html}{LinkedPRO Barra de Tierra Física} & 3 & \$1,099 MXN & \$3,297 MXN\\
+      \href{https://www.cyberpuerta.mx/Energia/Tierra-Fisica-y-Pararrayos/Tierra-Fisica/LinkedPRO-Varilla-de-Tierra-LP-GROUND-60A-Cobre.html}{LinkedPRO Tierra Física LP-GROUND-60A} & 1 & \$5,719 MXN & \$5,719 MXN\\
+      \href{https://www.cyberpuerta.mx/Computo-Hardware/Cables/Cables-de-Energia/Cables-de-Poder-Externo/Panduit-Cable-para-Aterrizar-Equipos-10AWG-para-Conexion-a-Tierra-0-61m-Verde-Amarillo.html}{Cable para Aterrizar Panduit 10AWG 0.61m} & 3 & \$719 MXN & \$2,157 MXN\\
+      \href{https://www.amazon.com.mx/Mikrotik-Router-Ethernet-CCR2004-1G-12S-2XS/dp/B087X9QKGH/ref=asc_df_B087X9QKGH?mcid=487819bd58573ad391e06e226dd2caf7&tag=gledskshopmx-20&linkCode=df0&hvadid=709873468494&hvpos=&hvnetw=g&hvrand=14305191418972884946&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1010149&hvtargid=pla-934306539069&psc=1&language=es_MX&gad_source=4}{Router Mikrotik CCR2004-1G-12S+2XS} & 1 & \$11,609 MXN & \$11,609 MXN\\
+      \textbf{Mano de obra} & 70\% costo de material & & \$107,650.90 MXN\\
+\end{longtable}
