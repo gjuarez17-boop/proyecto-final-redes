@@ -1,0 +1,22 @@
+\begin{table}[h]
+	\centering
+
+	\caption{\textit{Tabla de Direccionamiento IP (VLSM)}}
+	\label{tab:direccionamiento_ip}
+	\begin{tabularx}{\textwidth}{l l l l l l X} 
+		\toprule
+
+		VLAN & Nombre & Asignación & Subred & Prefijo & Gateway & Rango Utilizable \\
+		\midrule
+		20 & ALUMNOS & DHCP & 148.220.0.0 & /22 & 148.220.0.1 & Pool: 148.220.0.2 - 148.220.3.254 \\
+		30 & PROFESORES & DHCP & 148.220.4.0 & /25 & 148.220.4.1 & Pool: 148.220.4.2 - 148.220.4.126 \\
+		40 & VOIP & Estática & 148.220.4.128 & /25 & 148.220.4.129 & Rango: 148.220.4.130 - 148.220.4.254 \\
+		50 & CAMARAS & Estática & 148.220.5.0 & /25 & 148.220.5.1 & Rango: 148.220.5.2 - 148.220.5.126 \\
+		10 & ADMIN & Estática & 148.220.5.128 & /26 & 148.220.5.129 & Rango: 148.220.5.130 - 148.220.5.190 \\
+		\bottomrule
+	\end{tabularx}
+	
+	\parbox{\textwidth}{
+		\textit{Nota.} El plan utiliza VLSM para optimizar el bloque de red `148.220.0.0/21`. La puerta de enlace (gateway) es la primera IP utilizable de cada subred. Las VLANs de infraestructura (ADMIN, VOIP, CAMARAS) usan asignación estática, mientras que las VLANs de usuarios (ALUMNOS, PROFESORES) usan DHCP.
+	}
+\end{table}
