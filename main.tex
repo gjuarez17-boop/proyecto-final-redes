@@ -10,6 +10,20 @@
 \usepackage{tabularx}
 \usepackage{graphicx}
 \usepackage{geometry}
+\usepackage{caption}
+\usepackage{subcaption}  
+% --- Configuración de captions estilo APA 7 ---
+\captionsetup{
+	justification=justified,
+	singlelinecheck=false,
+	labelfont=bf,
+	labelsep=period
+}
+% Configuración específica para las sub-figuras
+\captionsetup[subfigure]{
+	labelfont=rm, % Letra normal para (a), (b)
+	labelformat=simple % Formato simple (a, b)
+}
 \addbibresource{main-sources.bib}
 \hypersetup{
   colorlinks=true,
