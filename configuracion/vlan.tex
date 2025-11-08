@@ -1,0 +1,24 @@
+
+% Buscar imágenes en la carpeta ../images (carpeta hermana al directorio configuracion)
+\graphicspath{{../images/}}
+		\textbf{Diagrama Lógico y Asignación de Red (VLSM)}
+	\par \vspace{3mm}
+
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.9\textwidth]{diagrama-logico-red-vlans}
+		
+		\caption{\textit{Diagrama Lógico de Segmentación por VLANs}}
+		\label{fig:diagrama-logico}
+		
+		\parbox{\textwidth}{
+			\vspace{2mm}
+			\small
+			\textit{Nota.} La figura muestra el diagrama lógico de la red, codificado por colores para representar la segmentación de VLANs implementada. Esta separación lógica aísla el tráfico entre departamentos y servicios para mejorar el rendimiento y la seguridad.
+		}
+	\end{figure}
+	
+	\par \vspace{3mm}
+	Para optimizar el uso del espacio de direcciones IP, se implementó un esquema de \textbf{Subnetting de Máscara de Longitud Variable (VLSM)} sobre el bloque de red base \texttt{148.220.0.0/21}. VLSM es una técnica que permite dividir un bloque de direcciones IP en subredes de diferentes tamaños, optimizando así la asignación de direcciones y minimizando el desperdicio (Singh \& Kaur, 2014).
+	
+	Como se observa en el diagrama (ver \textbf{Figura \ref{fig:diagrama-logico}}) y en el plan de direccionamiento anteriormente visto, las redes de usuarios (VLAN 20 Alumnos, VLAN 30 Profesores) se configuran con \textbf{DHCP} para una asignación automática de IPs. Por el contrario, la infraestructura (VLAN 10 Admin, VLAN 40 VoIP, VLAN 50 Cámaras) utiliza \textbf{asignación estática} para garantizar la seguridad. La primera IP utilizable de cada subred se reserva como \textbf{Gateway} y se configura en el Switch Core para permitir el enrutamiento entre las diferentes VLANs.
