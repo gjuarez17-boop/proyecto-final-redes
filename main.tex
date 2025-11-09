@@ -1,19 +1,24 @@
-\documentclass[stu, 12pt]{apa7}
+\PassOptionsToPackage{disable}{endfloat}
+\documentclass[floatsintext, stu, 12pt]{apa7}
 \usepackage{mathptmx}
+\usepackage{amsmath}
 \usepackage[spanish,mexico]{babel}
 \usepackage{bookmark}
 \usepackage[style=apa]{biblatex}
 \usepackage{csquotes}
-\usepackage{hyperref}
 \usepackage{longtable}
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{graphicx}
 \usepackage{geometry}
 \usepackage{caption}
-\usepackage{subcaption}  
+\usepackage{subcaption}
 \usepackage{array}
-\usepackage[colorlinks=true, urlcolor=blue]{hyperref} 
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{hyperref}
+\floatplacement{figure}{H}
+\floatplacement{table}{H}
 % --- Configuración de captions estilo APA 7 ---
 \captionsetup{
 	justification=justified,
@@ -26,71 +31,37 @@
 	labelfont=rm, % Letra normal para (a), (b)
 	labelformat=simple % Formato simple (a, b)
 }
-\addbibresource{main-sources.bib}
+\geometry{letterpaper, margin=2.5cm}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0pt}
+\graphicspath{{images/}}
+
+\addbibresource{references.bib}
 \hypersetup{
-  colorlinks=true,
-  urlcolor=blue,
-  linkcolor=black
+	colorlinks=true,
+	urlcolor=blue,
+	linkcolor=black
 }
 
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 
 \title{Red de edificio de Aulas}
-\authorsnames{Cárdenas Camacho Alexis -- 295592, Juárez Ramírez Gabriel -- 325846, Macías Fonseca Alejandro -- 325724, Mata Guerra David -- 325797}
+\authorsnames{Cárdenas Camacho Alexis \textendash{} 295592, Juárez Ramírez Gabriel \textendash{} 325846, Macías Fonseca Alejandro \textendash{} 325724, Mata Guerra David \textendash{} 325797}
 \authorsaffiliations{Facultad de Informática, Universidad Autónoma de Querétaro}
 \course{Diseño y Soporte de Redes}
 \professor{Estévez Serrato César}
 \duedate{28 de noviembre de 2025}
 
 \begin{document}
+\setstretch{2.0}
 \maketitle
 \tableofcontents
-\pagebreak
-\section{Planificación y Diseño}
-\input{planificacion-design/cableado.tex}
-\subsection{Equipos}
-\subsubsection{Equipo activo}
-\input{planificacion-design/equipo-activo.tex}
-\subsubsection{Equipo pasivo}
-\input{planificacion-design/equipo-pasivo.tex}
-\subsection{Metodología}
-\input{planificacion-design/metodologia.tex}
-\subsection{Tabla de Direccionamiento IP}
-\input{planificacion-design/tabla-direccionamiento.tex}
-\subsection{Tamaño de Red}
-\input{planificacion-design/size-red.tex}
-\subsection{Diagramas de Red}
-\subsubsection{Modelo jerárquico de red}
-\input{planificacion-design/modelo-jerarquico-red.tex}
-\subsubsection{Diagrama representativo}
-\input{planificacion-design/diagrama-packet.tex}
-\subsubsection{Diagrama físico estandarizado}
-\input{planificacion-design/diagrama-ansi.tex}
-\subsubsection{Diagrama de Rack}
-\input{planificacion-design/diagrama-rack.tex}
-\subsection{Topología de Red}
-\input{planificacion-design/topologia.tex}
-\subsection{Cotización}
-\input{planificacion-design/cotizacion.tex}
-\subsection{Identificación y Etiquetado}
-\input{planificacion-design/etiquetado.tex}
-\subsection{Cronograma}
-\input{planificacion-design/cronograma.tex}
-\section{Implementación de la Red}
-\subsection{Configuraciones de Equipos Activos}
-\input{configuracion/configuraciones.tex}
-\subsection{VLAN's}
-\input{configuracion/vlan.tex}
-\subsection{Análisis de WiFi}
-\input{configuracion/wifi.tex}
-\subsection{Certificación de Cable}
-\input{configuracion/certificacion-cable.tex}
-\subsubsection{Reportes}
-\input{configuracion/reportes.tex}
-\section{Monitoreo y Análisis de la Red}
-\section{Implementación de Seguridad}
-\input{./security/intro-security.tex}
-\section{Administración de Fallas}
-\section{Calidad en el Servicio}
-\printbibliography
+\clearpage
+\input{planificacion-design/planificacion-design.tex}
+\input{configuracion/implementacion-red.tex}
+\input{monitoreo-analisis/monitoreo-analisis.tex}
+\input{implementacion-seguridad/implementacion-seguridad.tex}
+\input{SLA/administracion-fallas.tex}
+\input{SLA/calidad-servicio.tex}
+\printbibliography%
 \end{document}

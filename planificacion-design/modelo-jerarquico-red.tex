@@ -1,22 +1,19 @@
 
-% Buscar imágenes en la carpeta ../images (carpeta hermana a planificacion-design)
-\graphicspath{{../images/}}
-		\textbf{Modelo de Red Jerárquico}
-	\par \vspace{3mm}
-	
-	El diseño de red para este proyecto se fundamenta en el **modelo jerárquico de tres capas**, una arquitectura estándar de la industria promovida por empresas como Cisco. Este modelo se valora por promover la escalabilidad, el rendimiento, la facilidad de gestión y la localización de fallos (Odom, 2019).
-	
-	\begin{center}
-		\includegraphics[width=1\linewidth]{diagrama-red-jerarquico}
-	\end{center}
-	
-	
-	El modelo jerárquico divide la red lógicamente en tres capas funcionales:
+\subsubsection{Modelo jerárquico de red}
+
+El diseño propuesto se fundamenta en el modelo jerárquico de tres capas, una arquitectura ampliamente adoptada por su escalabilidad, rendimiento y facilidad de gestión (Odom, 2019).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\linewidth]{diagrama-red-jerarquico}
+  \caption{\textit{Modelo jerárquico de la red propuesta}}
+  \label{fig:modelo-jerarquico}
+\end{figure}
+
+El modelo divide la red lógicamente en tres capas funcionales:
 	
 	\begin{itemize}
-		\item \textbf{Capa de Acceso (Morado):} Es el punto de entrada a la red para los dispositivos finales (PCs, teléfonos VoIP, cámaras CCTV, APs). Su función es proveer conectividad y aplicar políticas de seguridad a nivel de puerto (Kurose \& Ross, 2021). En este proyecto, los switches de los pisos 2 y 3, así como los puertos de usuario del switch del piso 1, operan en esta capa.
-		
-		\item \textbf{Capa de Distribución (Azul):} Agrega el tráfico proveniente de la Capa de Acceso y funciona como el límite de enrutamiento entre las VLANs (enrutamiento inter-VLAN). Es responsable de implementar políticas de red (como ACLs) y de la agregación de enlaces (Ghafoor et al., 2018). En este edificio, se utiliza un diseño de \textbf{Núcleo Colapsado (Collapsed Core)}, donde las funciones de Distribución y Núcleo de la LAN son consolidadas en un único switch multicapa (`SW-Core-P1`).
-		
-		\item \textbf{Capa de Núcleo (Verde):} Proporciona el backbone de alta velocidad de la red. Su único propósito es conmutar paquetes tan rápido como sea posible, garantizando alta disponibilidad y fiabilidad. En este diseño, la capa de núcleo está representada por los routers (`ROUTER-P1` y `ROUTER-INNOVACION`), que manejan el enrutamiento de alta velocidad entre edificios y hacia redes externas (Odom, 2019).
+		\item \textbf{Capa de acceso (Morado)}. Punto de entrada para dispositivos finales como equipos de cómputo, teléfonos VoIP, cámaras CCTV y puntos de acceso. Proporciona conectividad y aplica políticas a nivel de puerto (Kurose \& Ross, 2021). Los switches de los pisos 2 y 3, así como los puertos de usuario del piso 1, operan en esta capa.
+		\item \textbf{Capa de distribución (Azul)}. Agrega el tráfico de la capa de acceso y funge como límite de enrutamiento entre VLAN (enrutamiento inter-VLAN). Implementa políticas de red y agregación de enlaces (Ghafoor et al., 2018). Se adopta un núcleo colapsado en el switch multicapa central.
+		\item \textbf{Capa de núcleo (Verde)}. Proporciona el backbone de alta velocidad conmutando paquetes de forma eficiente y garantizando alta disponibilidad. En este diseño la capa está representada por los routers que enlazan el edificio con redes externas (Odom, 2019).
 	\end{itemize}

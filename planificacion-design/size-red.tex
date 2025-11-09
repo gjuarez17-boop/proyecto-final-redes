@@ -1,42 +1,29 @@
-	\textbf{Tamaño de la red (Tipo de red)}
-	\par \vspace{3mm} % Espacio después del título
-	
-	El presente proyecto contempla la implementación de una \textbf{Red de Área Local (LAN)} cableada y segmentada mediante \textbf{VLANs} dinámicas, con el objetivo de separar los distintos servicios que conforman la infraestructura de comunicaciones: telefonía IP, videovigilancia (CCTV), red de alumnos, docentes y administración. 
-	
-	Adicionalmente, la red incluye un \textbf{backbone de fibra óptica multimodo OM3}, utilizado para interconectar los armarios de telecomunicaciones entre pisos y establecer el enlace principal hacia el \textbf{Edificio de Innovación}, extendiendo así la infraestructura hacia un entorno de tipo \textbf{red de campus}.
-	
-	La red se dimensiona considerando los nodos cableados en cada cuarto, los dispositivos de seguridad (cámaras IP), los teléfonos VoIP, los equipos de red (switches, router, etc) y los puntos de acceso inalámbrico (AP). Se prevé un \textbf{crecimiento futuro a 20 años promedio}, por lo que las subredes fueron definidas con espacio de reserva suficiente para expansión.
-	
-	\par \vspace{5mm} % Espacio entre secciones
-	\textbf{Estructura  general de la red}
-	\par \vspace{3mm}
-	
-	\begin{itemize}
-		\item \textbf{Tipo de red:} LAN cableada (Cat6 UTP) con backbone de fibra óptica multimodo OM3.
-		\item \textbf{Topología lógica:} Estrella jerárquica con switches de acceso y un switch central en el rack principal.
-		\item \textbf{Tipo de enlace interedificio:} Fibra óptica multimodo (OM3), conectando el edificio A con el Edificio de Innovación.
-		\item \textbf{Segmentación lógica:} Por VLANs para aislar tráfico y priorizar servicios (QoS en VoIP).
-	\end{itemize}
-	
-	\par \vspace{5mm} % Espacio entre secciones
-	\textbf{Dimensionamiento de subredes y VLANs}
-	\par \vspace{3mm}
-	
-	El direccionamiento base definido para el proyecto es \textbf{148.x.x.x/21}, el cual permite un máximo de 2046 hosts útiles por VLAN. Sin embargo, con el fin de optimizar la administración y reducir el tamaño de los dominios de broadcast, las VLANs se subdividen en bloques menores según la cantidad de dispositivos de cada servicio.
-	
-	\par \vspace{5mm} % Espacio entre secciones
-	\textbf{Resumen general de la red}
-	
-	\begin{table}[h!]
-		\centering
-	
-		\begin{tabularx}{\textwidth}{LLLLL} 
-			\toprule
-			\textbf{Tipo de red} & \textbf{Medio físico} & \textbf{Velocidad} & \textbf{Backbone} & \textbf{Segmentación} \\
-			\midrule
-			LAN cableada y WLAN integrada & Cobre (Cat6 UTP) y fibra óptica OM3 & 1 Gbps (cobre), 10 Gbps (fibra) & Multimodo entre edificios & VLANs por servicio \\
-			\bottomrule
-		\end{tabularx}
-		\caption{\textit{Resumen general de la red implementada}}
-		\label{tab:resumen-red} % Label para la tabla
-	\end{table}
+\subsection{Tamaño de red}
+
+El proyecto contempla la implementación de una red de área local (LAN) cableada y segmentada mediante VLAN dinámicas (VLSM) para separar los servicios de telefonía IP, videovigilancia, alumnos, docentes y administración.
+
+El backbone de fibra óptica multimodo OM3 interconecta los armarios de telecomunicaciones entre pisos y proporciona el enlace hacia el edificio de Innovación, extendiendo la infraestructura a un entorno de campus. El dimensionamiento considera nodos cableados, cámaras IP, teléfonos VoIP, equipos de red y puntos de acceso inalámbrico, con capacidad de crecimiento proyectada a 20 años.
+
+Los elementos principales de la red se resumen en los siguientes puntos:
+
+\begin{itemize}
+  \item Tipo de red: LAN cableada (Cat 6 UTP) con integración de WLAN para usuarios móviles.
+  \item Topología lógica: estrella jerárquica con switches de acceso y un switch central.
+  \item Enlace interedificio: fibra óptica multimodo OM3 hacia el edificio de Innovación.
+  \item Segmentación lógica: VLAN por servicio con soporte de calidad de servicio para voz.
+\end{itemize}
+
+El bloque base 148.220.0.0/21 permite 2046 hosts útiles por VLAN. Para optimizar su uso, las VLAN se subdividen con VLSM según la densidad de dispositivos de cada servicio y los requisitos de crecimiento.
+
+\begin{table}[H]
+  \caption{\textit{Resumen general de la red implementada}}
+  \label{tab:resumen-red}
+  \centering
+  \begin{tabularx}{\textwidth}{l l l l X}
+    	\toprule
+    	\textbf{Tipo de red} & \textbf{Medio físico} & \textbf{Velocidad} & \textbf{Backbone} & \textbf{Segmentación} \\
+    \midrule
+    LAN cableada & Cobre Cat 6 UTP y fibra OM3 & 1 Gbps (cobre); 10 Gbps (fibra) & Fibra multimodo entre edificios & VLAN por servicio\\
+    \bottomrule
+  \end{tabularx}
+\end{table}

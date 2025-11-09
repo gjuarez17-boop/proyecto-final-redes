@@ -1,194 +1,157 @@
 
-% Buscar imágenes en la carpeta ../images (carpeta hermana a planificacion-design)
-\graphicspath{{../images/}}
-	\begin{center}
-		\includegraphics[width=0.4\linewidth]{Diagrama rack piso 1(1)}
-	\end{center}
+\subsubsection{Diagrama de rack}
 
-	\textbf{Componentes del Gabinete (Core Piso 1)}
-	\begin{table}[h]
-		\centering
-		\label{tab:rack_piso1}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.45\linewidth]{Diagrama rack piso 1(1)}
+  \caption{\textit{Distribución del rack principal en el piso 1}}
+  \label{fig:rack_piso1}
+\end{figure}
 
-		\begin{tabularx}{\textwidth}{l l l X} 
-			\toprule
+\begin{table}[H]
+  \caption{\textit{Componentes del gabinete central (piso 1)}}
+  \label{tab:rack_piso1}
+  \centering
+  \begin{tabularx}{\textwidth}{l l l X}
+    	\toprule
+    	\textbf{Unidad (U)} & \textbf{Dispositivo} & \textbf{Tipo} & \textbf{Función o descripción} \\
+    \midrule
+    1U & Patch panel modular & Pasivo & Termina el cableado proveniente de los pisos superiores. \\
+    2U & Organizador de cable & Pasivo & Ordena los conductores entre el panel y los equipos activos. \\
+    1U & Switch core & Activo & Conecta los switches de cada piso y realiza enrutamiento interno. \\
+    1U & Router core & Activo & Gestiona la salida a redes externas y la interconexión al campus. \\
+    3U & UPS & Activo & Proporciona respaldo energético ante fallas eléctricas. \\
+    1U & Módulo de enfriamiento & Activo & Asegura ventilación y control térmico dentro del gabinete. \\
+    1U & PDU & Pasivo & Distribuye energía hacia los dispositivos montados. \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
 
-			Unidad (U) & Dispositivo & Tipo  & Función / Descripción \\
-			\midrule
-			1U & Patch Panel Modular & Pasivo & Termina los cables provenientes de los pisos \\
-			2U & Organizador de cable & Pasivo & Ordena los cables del panel hacia el switch \\
-			1U & Switch Core & Activo & Conecta los switches de piso \\
-			1U & Router Core & Activo & Enrutamiento y conexión a Internet \\
-			3U & UPS & Activo & Respaldo de energía \\
-			1U & Módulo de enfriamiento & Activo & Ventilación del gabinete \\
-			1U & PDU & Pasivo & Permite conectar dispositivos a la energía \\
-			\bottomrule
-		\end{tabularx}
-	\end{table}
-	
-	\textbf{Componentes para la conexión}
-	\begin{table}[h]
-		\centering
-		\label{tab:bom_piso1}
+\begin{table}[H]
+  \caption{\textit{Componentes auxiliares para el rack del piso 1}}
+  \label{tab:bom_piso1}
+  \centering
+  \begin{tabularx}{\textwidth}{r l X}
+    	\toprule
+    	\textbf{Cantidad} & \textbf{Unidad} & \textbf{Componente} \\
+    \midrule
+    \multicolumn{3}{l}{\textit{Acomodo (rack)}} \\
+    1 & Pza & Gabinete de pared de 12U. \\
+    1 & Pza & UPS de respaldo. \\
+    1 & Pza & PDU horizontal de 1U. \\
+    1 & Pza & Organizador de cables horizontal de 1U. \\
+    1 & Paq & Tornillería y tuercas para montaje. \\
+    \multicolumn{3}{l}{\textit{Conexión (cableado)}} \\
+    1 & Pza & Patch panel modular para fibra y cobre. \\
+    2 & Pza & Adaptadores de fibra LC dúplex multimodo. \\
+    26 & Pza & Patch cords de cobre categoría 6. \\
+    2 & Pza & Patch cords de fibra multimodo. \\
+    \multicolumn{3}{l}{\textit{Equipo activo}} \\
+    1 & Pza & Router. \\
+    1 & Pza & Switch de 24 puertos con ranuras SFP. \\
+    2 & Pza & Módulos SFP 1 Gbps multimodo. \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
 
-		\begin{tabularx}{\textwidth}{r l X} 
-			\toprule
-			Cantidad & Unidad & Componente \\
-			\midrule
-			
-			\multicolumn{3}{l}{\textit{Acomodo (Rack)}} \\
-			\addlinespace 
-			1 & Pza & Gabinete de Pared (12U) \\
-			1 & Pza & UPS (Batería) \\	
-			1 & Pza & PDU (Multicontacto horizontal, 1U) \\
-			1 & Pza & Organizador de Cables (Horizontal, 1U) \\
-			1 & Paq & Tornillos y Tuercas (Juegos de montaje) \\
-			
-			\addlinespace
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\linewidth]{diagrama_rack piso 2}
+  \caption{\textit{Distribución del rack de telecomunicaciones en el piso 2}}
+  \label{fig:rack_piso2}
+\end{figure}
 
-			\multicolumn{3}{l}{\textit{Conexión (Cableado)}} \\
-			\addlinespace
-			1 & Pza & Patch Panel Modular (Fibra Óptica y cobre)\\
-			2 & Pza & Adaptadores de Fibra (LC Dúplex Multimodo) \\
-			26 & Pza & Patch Cords Cobre\\
-			2 & Pza & Patch Cords Fibra\\
-			
-			\addlinespace
+\begin{table}[H]
+  \caption{\textit{Componentes instalados en el rack del piso 2}}
+  \label{tab:rack_piso2}
+  \centering
+  \begin{tabularx}{\textwidth}{l l l X}
+    	\toprule
+    	\textbf{Unidad (U)} & \textbf{Dispositivo} & \textbf{Tipo} & \textbf{Función o descripción} \\
+    \midrule
+    1U & Módulo de enfriamiento & Activo & Mantiene ventilación y control térmico del gabinete. \\
+    1U & Patch panel modular & Pasivo & Termina el cableado horizontal de la planta. \\
+    2U & Organizador de cables & Pasivo & Ordena los patch cords entre panel y switch. \\
+    1U & Switch de acceso & Activo & Conecta los dispositivos finales del piso. \\
+    3U & UPS & Activo & Provee respaldo de energía. \\
+    1U & PDU & Pasivo & Distribuye energía hacia el equipo activo. \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
 
-			\multicolumn{3}{l}{\textit{Equipo Activo (Hardware)}} \\
-			\addlinespace
-			1 & Pza & Router \\
-			1 & Pza & Switch (24 puertos + SFP) \\
-			2 & Pza & Módulos SFP (1Gbps Multimodo) \\
-			
-			\bottomrule
-		\end{tabularx}
-	\end{table}
+\begin{table}[H]
+  \caption{\textit{Componentes auxiliares para la instalación del rack del piso 2}}
+  \label{tab:bom_piso2}
+  \centering
+  \begin{tabularx}{\textwidth}{r l X}
+    	\toprule
+    	\textbf{Cantidad} & \textbf{Unidad} & \textbf{Componente} \\
+    \midrule
+    \multicolumn{3}{l}{\textit{Acomodo (rack)}} \\
+    1 & Pza & Gabinete de pared de 12U. \\
+    1 & Pza & Módulo de enfriamiento de 1U. \\
+    1 & Pza & Organizador de cables horizontal de 2U. \\
+    1 & Pza & UPS de 3U. \\
+    1 & Pza & PDU horizontal de 1U. \\
+    1 & Paq & Tornillería y herrajes de montaje. \\
+    \multicolumn{3}{l}{\textit{Conexión (cableado)}} \\
+    1 & Pza & Patch panel modular para fibra y cobre. \\
+    24 & Pza & Patch cords de cobre categoría 6. \\
+    1 & Pza & Patch cord de fibra multimodo. \\
+    \multicolumn{3}{l}{\textit{Equipo activo}} \\
+    1 & Pza & Switch de 24 puertos GbE con 2 SFP. \\
+    2 & Pza & Módulos SFP multimodo LC de 1 Gbps. \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
 
-	\pagebreak
-	\begin{center}
-		\includegraphics[width=0.5\linewidth]{diagrama_rack piso 2}
-	\end{center}
-	
-	
-	\textbf{Componentes del rack (Piso 2)}
-	\begin{table}[h]
-		\centering
-		\label{tab:rack_piso2}
-		\begin{tabularx}{\textwidth}{l l l X} 
-			\toprule
-			Unidad (U) & Dispositivo & Tipo  & Función / Descripción \\
-			\midrule
-			1U & Módulo de enfriamiento & Activo & Ventilación y control de temperatura del gabinete. \\
-			1U & Patch Panel Modular & Pasivo & Interconecta el cableado estructurado (fibra y cobre). \\
-			2U & Organizador de Cables & Pasivo & Gestiona y ordena los patch cords entre el panel y el switch. \\
-			1U & Switch & Activo & Conecta los dispositivos finales (PCs, APs, etc.)\\
-			3U & UPS & Activo & Proporciona respaldo de energía en caso de fallo eléctrico. \\
-			1U & PDU & Pasivo & Distribuye la energía eléctrica del UPS a los demás dispositivos. \\
-			\bottomrule
-		\end{tabularx}
-	\end{table}
-	
-	\vspace{1cm} 
-	
-	\textbf{Componentes para la conexión (Rack Piso 2)}
-	\begin{table}[h]
-		\centering
-		\label{tab:bom_piso2} 
-		\begin{tabularx}{\textwidth}{r l X} 
-			\toprule
-			Cantidad & Unidad & Componente \\
-			\midrule
-			
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\linewidth]{diagrama_rack_piso 3}
+  \caption{\textit{Distribución del rack de telecomunicaciones en el piso 3}}
+  \label{fig:rack_piso3}
+\end{figure}
 
-			\multicolumn{3}{l}{\textit{Acomodo (Rack)}} \\
-			\addlinespace 
-			1 & Pza & Gabinete de Pared (12U) \\ 
-			1 & Pza & Módulo de enfriamiento (Ventiladores, 1U) \\
-			1 & Pza & Organizador de Cables (Horizontal, 2U) \\
-			1 & Pza & UPS (Batería, 3U) \\ 
-			1 & Pza & PDU (Multicontacto horizontal, 1U) \\
-			1 & Paq & Tornillos y Tuercas (Juegos de montaje) \\
-			
-			\addlinespace
+\begin{table}[H]
+  \caption{\textit{Componentes instalados en el rack del piso 3}}
+  \label{tab:rack_piso3}
+  \centering
+  \begin{tabularx}{\textwidth}{l l l X}
+    	\toprule
+    	\textbf{Unidad (U)} & \textbf{Dispositivo} & \textbf{Tipo} & \textbf{Función o descripción} \\
+    \midrule
+    1U & Módulo de enfriamiento & Activo & Mantiene la temperatura operativa del gabinete. \\
+    1U & Patch panel modular & Pasivo & Termina el cableado horizontal del piso. \\
+    2U & Organizador de cables & Pasivo & Ordena los patch cords hacia el switch. \\
+    1U & Switch de acceso & Activo & Conecta los equipos finales del nivel. \\
+    3U & UPS & Activo & Proporciona respaldo de energía. \\
+    1U & PDU & Pasivo & Distribuye energía hacia los equipos. \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
 
-			\multicolumn{3}{l}{\textit{Conexión (Cableado)}} \\
-			\addlinespace
-			1 & Pza & Patch Panel Modular (Fibra óptica y cobre) \\
-			24 & Pza & Patch Cords Cobre \\ 
-			1 & Pza & Patch Cord Fibra  \\ 
-			
-			\addlinespace
-			\multicolumn{3}{l}{\textit{Equipo Activo (Hardware)}} \\
-			\addlinespace
-			1 & Pza & Switch (24 puertos GbE + 2 SFP, 1U) \\ 
-			2 & Pza & Módulos SFP (1Gbps Multimodo, LC) \\
-			
-			\bottomrule
-		\end{tabularx}
-	\end{table}
-	
-		\pagebreak
-		\begin{center}
-			\includegraphics[width=0.5\linewidth]{diagrama_rack_piso 3}
-		\end{center}
-		
-	\textbf{Componentes del rack (Piso 3)}
-	\begin{table}[h]
-		\centering
-		\label{tab:rack_piso3}
-
-		\begin{tabularx}{\textwidth}{l l l X} 
-			\toprule
-
-			Unidad (U) & Dispositivo & Tipo  & Función / Descripción \\
-			\midrule
-			1U & Módulo de enfriamiento & Activo & Ventilación y control de temperatura del gabinete. \\
-			1U & Patch Panel Modular & Pasivo & Interconecta el cableado estructurado (fibra y cobre). \\
-			2U & Organizador de Cables & Pasivo & Gestiona y ordena los patch cords entre el panel y el switch. \\
-			1U & Switch & Activo & Conecta los dispositivos finales (PCs, APs, etc.)\\
-			3U & UPS & Activo & Proporciona respaldo de energía en caso de fallo eléctrico. \\
-			1U & PDU & Pasivo & Distribuye la energía eléctrica del UPS a los demás dispositivos. \\
-			\bottomrule
-		\end{tabularx}
-	\end{table}
-	
-	\vspace{1cm} 
-	
-	\textbf{Componentes para la conexión (Rack Piso 3)}
-	\begin{table}[h]
-		\centering
-		\label{tab:bom_piso3}
-
-		\begin{tabularx}{\textwidth}{r l X} 
-			\toprule
-			Cantidad & Unidad & Componente \\
-			\midrule
-			
-			\multicolumn{3}{l}{\textit{Acomodo (Rack)}} \\
-			\addlinespace
-			1 & Pza & Gabinete de Pared (12U) \\
-			1 & Pza & Módulo de enfriamiento (Ventiladores, 1U) \\
-			1 & Pza & Organizador de Cables (Horizontal, 2U) \\
-			1 & Pza & UPS (Batería, 3U) \\ 
-			1 & Pza & PDU (Multicontacto horizontal, 1U) \\
-			1 & Paq & Tornillos y Tuercas (Juegos de montaje) \\
-			
-			\addlinespace
-
-			\multicolumn{3}{l}{\textit{Conexión (Cableado)}} \\
-			\addlinespace
-			1 & Pza & Patch Panel Modular (Fibra óptica y cobre)\\
-			24 & Pza & Patch Cords Cobre\\ 
-			1 & Pza & Patch Cord Fibra\\
-			
-			\addlinespace
-
-			\multicolumn{3}{l}{\textit{Equipo Activo (Hardware)}} \\
-			\addlinespace
-			1 & Pza & Switch (24 puertos GbE + 2 SFP, 1U) \\ 
-			2 & Pza & Módulos SFP (1Gbps Multimodo, LC) \\
-			
-			\bottomrule
-		\end{tabularx}
-	\end{table}
+\begin{table}[H]
+  \caption{\textit{Componentes auxiliares para el rack del piso 3}}
+  \label{tab:bom_piso3}
+  \centering
+  \begin{tabularx}{\textwidth}{r l X}
+    	\toprule
+    	\textbf{Cantidad} & \textbf{Unidad} & \textbf{Componente} \\
+    \midrule
+    \multicolumn{3}{l}{\textit{Acomodo (rack)}} \\
+    1 & Pza & Gabinete de pared de 12U. \\
+    1 & Pza & Módulo de enfriamiento de 1U. \\
+    1 & Pza & Organizador de cables horizontal de 2U. \\
+    1 & Pza & UPS de 3U. \\
+    1 & Pza & PDU horizontal de 1U. \\
+    1 & Paq & Tornillería y herrajes de sujeción. \\
+    \multicolumn{3}{l}{\textit{Conexión (cableado)}} \\
+    1 & Pza & Patch panel modular para fibra y cobre. \\
+    24 & Pza & Patch cords de cobre categoría 6. \\
+    1 & Pza & Patch cord de fibra multimodo. \\
+    \multicolumn{3}{l}{\textit{Equipo activo}} \\
+    1 & Pza & Switch de 24 puertos GbE con 2 SFP. \\
+    2 & Pza & Módulos SFP multimodo LC de 1 Gbps. \\
+    \bottomrule
+  \end{tabularx}
+\end{table}

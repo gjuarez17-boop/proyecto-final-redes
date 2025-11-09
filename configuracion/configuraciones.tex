@@ -1,21 +1,11 @@
-	\begin{center}
-	\href{https://drive.google.com/file/d/1mHfBjxOKNXVSxJJW_NH12IAQf1O9go8d/view?usp=sharing}{\textbf{Archivo de Packet Tracer del Proyecto (Click aquí)}}
-	\end{center}
-	\par \vspace{5mm} 
-	
-	\textbf{Configuración Lógica (Packet Tracer)}
-	\par \vspace{3mm}
-	
-	El archivo de Packet Tracer adjunto contiene la implementación funcional de la red. Se han aplicado las siguientes configuraciones clave en el equipo activo, de acuerdo con los requerimientos del proyecto:
-	
-	\begin{itemize}
-		\item \textbf{Configuraciones Básicas:} Se configuró en todos los switches y routers un \texttt{hostname} único (ej. \texttt{SW-Core-P1}, \texttt{RTR-Core-P1}, \texttt{SW-Acceso-P2}) para su identificación. Se establecieron contr contraseña de consola, VTY y de modo privilegiado (\texttt{enable secret}) con encriptación global (\texttt{service password-encryption}) para asegurar el acceso.
-		
-		\item \textbf{Configuración de VLANs:} Se crearon las VLANs con sus respectivos nombres (VLAN 10 ADMIN, 20 ALUMNOS, 30 PROFESORES, 40 VOIP, 50 CAMARAS) en el switch Core (Piso 1). Los puertos de acceso se asignaron a su VLAN correspondiente (ej. \texttt{switchport access vlan 20}) y los enlaces entre switches se configuraron como \texttt{trunk} para permitir el paso de todas las VLANs.
-		
-		\item \textbf{Telefonía IP (VLAN 40):} Los teléfonos VoIP están en la VLAN 40. Cada teléfono tiene asignada una extensión única (ej. 1001, 1002, 2001) y se ha verificado la comunicación por llamada entre ellos.
-		
-		\item \textbf{Videovigilancia (VLAN 50):} Las cámaras CCTV, representadas en el diagrama, están configuradas con IPs estáticas dentro del rango de la VLAN 50 (ej. \texttt{148.220.5.x}), asegurando una dirección fija.
-		
-		\item \textbf{Direccionamiento IPv4:} La asignación de direcciones IPv4 se basa en el plan VLSM, con los gateways (ej. \texttt{148.220.0.1}) configurados en el Switch Core de la capa distribucion \texttt({SW-Core-P1}) para permitir el enrutamiento inter-VLAN.
-	\end{itemize}
+\subsection{Configuraciones de equipos activos}
+
+El archivo de Packet Tracer disponible en \href{https://drive.google.com/file/d/1mHfBjxOKNXVSxJJW_NH12IAQf1O9go8d/view?usp=sharing}{este enlace} contiene la implementación lógica de la red. Las principales configuraciones aplicadas son las siguientes:
+
+\begin{itemize}
+  \item Configuraciones básicas. Cada switch y router cuenta con un \texttt{hostname} único y contraseñas cifradas para acceso por consola, VTY y modo privilegiado.
+  \item Configuración de VLAN. Se crean las VLAN 10 (ADMIN), 20 (ALUMNOS), 30 (PROFESORES), 40 (VOIP) y 50 (CÁMARAS) en el switch central. Los puertos de acceso se asignan a su VLAN correspondiente y los enlaces entre switches se configuran como \texttt{trunk}.
+  \item Telefonía IP. Los teléfonos se ubican en la VLAN 40 con extensiones únicas y se verifica la comunicación entre ellos.
+  \item Videovigilancia. Las cámaras CCTV emplean direcciones estáticas dentro del rango de la VLAN 50 para garantizar supervisión permanente.
+  \item Direccionamiento IPv4. El plan VLSM define los gateways configurados en el switch multicapa del piso 1 para permitir el enrutamiento inter-VLAN.
+\end{itemize}

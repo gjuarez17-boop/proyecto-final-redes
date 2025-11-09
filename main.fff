@@ -1,0 +1,70 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[h!]
+\centering
+\begin{subfigure}[b]{0.3\textwidth}
+\centering
+\includegraphics[width=\linewidth]{cisco-diagram-piso1}
+\caption{Piso 1}
+\label{fig:piso1}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.3\textwidth}
+\centering
+\includegraphics[width=\linewidth]{cisco-diagram-piso2}
+\caption{Piso 2}
+\label{fig:piso2}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.3\textwidth}
+\centering
+\includegraphics[width=\linewidth]{cisco-diagram-piso3}
+\caption{Piso 3}
+\label{fig:piso3}
+\end{subfigure}
+
+
+\caption{\textit{Topología Física de la Red del Edificio Administrativo}}
+\label{fig:red-fisica}
+
+\parbox{\textwidth}{
+\vspace{2mm}
+\small
+\textit{Nota.} Los paneles (a), (b), y (c) muestran la distribución de equipos por piso. Cada piso cuenta con su propio switch de acceso conectado a un switch de distribución central ubicado en el piso 1 (Este cumple con la función tanto core como acceso al piso 1). Esta estructura permite facilitar el mantenimiento de los equipos. Planeado para una escalabilidad a 20 años aproximadamente.
+}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[h!]
+\centering
+% Se puede ajustar el ancho si se desea, 0.6 o 0.7 es buena opción
+\includegraphics[width=0.3\textwidth]{cisco-diagram-conexion-innovacion}
+
+\caption{\textit{Topología de Interconexión Aérea con Edificio de Innovación}}
+\label{fig:conexion-innovacion} % Label único para esta figura
+
+\parbox{\textwidth}{
+\vspace{2mm}
+\small
+\textit{Nota.} La interconexión se realiza mediante un enlace de \textbf{fibra óptica aérea} multimodo. Se utiliza esta tecnología para proveer un alto ancho de banda. La conexión se establece de Router-a-Router (Capa 3) para aislar dominios de broadcast y mejorar la gestión de la red.
+}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{diagrama-logico-red-vlans}
+
+\caption{\textit{Diagrama Lógico de Segmentación por VLANs}}
+\label{fig:diagrama-logico}
+
+\parbox{\textwidth}{
+\vspace{2mm}
+\small
+\textit{Nota.} La figura muestra el diagrama lógico de la red, codificado por colores para representar la segmentación de VLANs implementada. Esta separación lógica aísla el tráfico entre departamentos y servicios para mejorar el rendimiento y la seguridad.
+}
+\end{figure*}
