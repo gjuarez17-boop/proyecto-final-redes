@@ -1,7 +1,7 @@
 
 \subsubsection{Modelo jerárquico de red}
 
-El diseño propuesto se fundamenta en el modelo jerárquico de tres capas, una arquitectura ampliamente adoptada por su escalabilidad, rendimiento y facilidad de gestión (Odom, 2019).
+El diseño propuesto se fundamenta en el modelo jerárquico de tres capas, una arquitectura ampliamente adoptada por su escalabilidad, rendimiento y facilidad de gestión \parencite{odom2019ccna}.
 
 \begin{figure}[H]
   \centering
@@ -13,7 +13,6 @@ El diseño propuesto se fundamenta en el modelo jerárquico de tres capas, una a
 El modelo divide la red lógicamente en tres capas funcionales:
 	
 	\begin{itemize}
-		\item \textbf{Capa de acceso (Morado)}. Punto de entrada para dispositivos finales como equipos de cómputo, teléfonos VoIP, cámaras CCTV y puntos de acceso. Proporciona conectividad y aplica políticas a nivel de puerto (Kurose \& Ross, 2021). Los switches de los pisos 2 y 3, así como los puertos de usuario del piso 1, operan en esta capa.
-		\item \textbf{Capa de distribución (Azul)}. Agrega el tráfico de la capa de acceso y funge como límite de enrutamiento entre VLAN (enrutamiento inter-VLAN). Implementa políticas de red y agregación de enlaces (Ghafoor et al., 2018). Se adopta un núcleo colapsado en el switch multicapa central.
-		\item \textbf{Capa de núcleo (Verde)}. Proporciona el backbone de alta velocidad conmutando paquetes de forma eficiente y garantizando alta disponibilidad. En este diseño la capa está representada por los routers que enlazan el edificio con redes externas (Odom, 2019).
-	\end{itemize}
+	  \item \textbf{Capa de acceso (Morado)}. Punto de entrada para dispositivos finales como equipos de cómputo, teléfonos VoIP, cámaras CCTV y puntos de acceso. Proporciona conectividad y aplica políticas a nivel de puerto \parencite{kurose2021computer}. Los switches de los pisos 2 y 3, así como los puertos de usuario del piso 1, operan en esta capa.
+	  \item \textbf{Capa de distribución (Azul)}. Agrega el tráfico de la capa de acceso y funge como límite de enrutamiento entre VLAN (enrutamiento inter-VLAN). Implementa políticas de red y agregación de enlaces \parencite{ghafoor2018campus}. Se adopta un núcleo colapsado en el switch multicapa central.
+	  \item \textbf{Capa de núcleo (Verde)}. Proporciona el backbone de alta velocidad conmutando paquetes de forma eficiente y garantizando alta disponibilidad. En este diseño la capa está representada por los routers que enlazan el edificio con redes externas \parencite{odom2019ccna}.	\end{itemize}
