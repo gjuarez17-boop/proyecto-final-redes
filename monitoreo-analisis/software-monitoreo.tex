@@ -1,2 +1,28 @@
 \subsection{Software de Monitoreo}
 
+El software de monitoreo constituye un componente esencial en la administración y supervisión de redes informáticas. Su propósito es recopilar, analizar y representar información en tiempo real sobre el estado de los dispositivos, el rendimiento del tráfico y la disponibilidad de los servicios. Estas herramientas permiten detectar fallas, anticipar problemas y mantener la continuidad operativa de la red, garantizando así la eficiencia y la seguridad del sistema \parencite{Orozco2022}.
+
+\subsubsection{Solución Seleccionada: Zabbix y Grafana}
+
+Para el presente proyecto se seleccionó una combinación de \textbf{Zabbix} y \textbf{Grafana} como solución integral de monitoreo y visualización. Ambos sistemas son de \textit{código abierto} y no requieren pago de licencias, lo que los convierte en una opción ideal para proyectos con presupuesto limitado.
+
+\textbf{Zabbix} actúa como el motor principal de monitoreo, encargado de recopilar información mediante protocolos estándar como \textbf{SNMP}, \textbf{ICMP}, \textbf{SSH} y \textbf{API}, permitiendo supervisar dispositivos dentro de la red. Entre ellos se incluye el firewall \textbf{\textit{OPNsense}}, que dispone de plantillas de monitoreo dedicadas para integrar métricas de rendimiento y seguridad, tales como el uso de CPU, tráfico en interfaces WAN/LAN, memoria, sesiones activas y registros de eventos.
+
+Por su parte, \textbf{Grafana} complementa esta solución como una plataforma avanzada de visualización de datos. Su función es conectarse a la base de datos de Zabbix mediante el \textit{plugin oficial Zabbix Data Source}, permitiendo generar paneles interactivos e informes gráficos altamente personalizables. Grafana es una herramienta \textbf{libre y gratuita}, distribuida bajo la licencia \textbf{AGPLv3}, lo que garantiza su uso, modificación y redistribución sin costo adicional.
+
+La elección de esta dupla tecnológica se fundamenta en las siguientes ventajas:
+\begin{itemize}
+    \item \textbf{Compatibilidad Total:} Zabbix y Grafana se integran con \textit{OPNsense} de forma nativa mediante SNMP o API, permitiendo una visualización centralizada del estado del firewall junto con otros dispositivos de red.
+    \item \textbf{Costo Cero de Licenciamiento:} Ambas soluciones son de código abierto, eliminando los costos asociados a software propietario y manteniendo una arquitectura completamente libre.
+    \item \textbf{Monitoreo Centralizado:} Zabbix recolecta métricas en tiempo real mientras Grafana presenta la información mediante paneles dinámicos, facilitando la interpretación visual de los datos.
+    \item \textbf{Escalabilidad y Flexibilidad:} La solución puede implementarse en entornos pequeños o ampliarse para redes más complejas sin cambios significativos en su estructura.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{zabbix-grafana-dashboard}
+\caption{\textit{Panel de monitoreo integrado de Zabbix y Grafana supervisando OPNsense}}\label{fig:zabbixgrafana}
+\begin{flushleft}
+    \textit{Nota.} En el panel se observa la integración de métricas en tiempo real provenientes del firewall \textit{OPNsense}, presentadas mediante la interfaz gráfica de \textit{Grafana} conectada al servidor de \textit{Zabbix}.
+\end{flushleft}
+\end{figure}
