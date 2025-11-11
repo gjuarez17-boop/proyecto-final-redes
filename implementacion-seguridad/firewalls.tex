@@ -1,10 +1,36 @@
-Para el apartado de seguridad, se utilizará una computadora de propósito general, adaptada para tener las suficientes interfaces para conectarse a la red, corriendo el sistema operativo \textit{OPNsense}, el cual es de código abierto, y reduce el costo de pagar licencias de software de código cerrado.
+\subsection{Solución de Firewall (Hardware y Software)}
+Los firewalls constituyen un componente esencial en la seguridad de redes moderna. Actúan como una barrera de defensa fundamental, cuya función principal es supervisar, filtrar y controlar todo el tráfico de red entrante y saliente basándose en un conjunto de reglas de seguridad predefinidas. Su objetivo es identificar y bloquear el tráfico no deseado o malicioso antes de que pueda comprometer los activos internos. De esta manera, los firewalls se convierten en una de las herramientas de protección de información con mayor relevancia, ayudando a preservar los tres pilares de la seguridad de la información: la integridad, la confidencialidad y la disponibilidad \parencite{MoraBandera2020}
 
-OPNsense es un sistema operativo basado en FreeBSD la cual está pensada para ser utilizada en dispositivos de red como firewalls y routers, lo cual da una facilidad para acceder a herramientas comunes al momento de configurar el equipo, como lo puede ser tablas de reglas de firewall, redirección de puertos, y, al ser un sistema operativo de código abierto, da puerta a poder configurarlo a las necesidades de la red.
-\begin{figure}
-  \caption{Captura de pantalla de OPNsense}
-	\begin{center}
-	  \includegraphics[width=0.6\textwidth]{images/opnsense-screenshot.png}
-	\end{center}
+La solución propuesta se compone de una plataforma de hardware dedicada y un sistema operativo de firewall de nueva generación.
+
+\subsubsection{Plataforma de Hardware}
+El hardware seleccionado es el \textbf{Protectli Vault de cuatro puertos}. Este equipo es un dispositivo de hardware dedicado (tipo "barebones" o mini-PC) diseñado específicamente para ejecutar software de seguridad de red de forma eficiente. A diferencia de un router de consumo, está optimizado para el alto rendimiento en tareas de enrutamiento y cifrado.
+
+La justificación de esta elección se basa en varios puntos clave:
+\begin{itemize}
+    \item \textbf{Rendimiento de Red:} Utiliza procesadores Intel\textregistered{} de múltiples núcleos y, crucialmente, \textbf{puertos de red (NICs) Intel\textregistered{}}, que garantizan un rendimiento y compatibilidad superiores para el manejo de tráfico intenso y la segmentación por VLAN.
+    \item \textbf{Eficiencia y Fiabilidad:} Su diseño sin ventilador ("fanless") asegura un funcionamiento 24/7 completamente silencioso y un bajo consumo energético.
+    \item \textbf{Soporte VPN de alta velocidad:} Incluye soporte de hardware \textbf{AES-NI}, lo cual permite al procesador acelerar el cifrado y descifrado. Esto es fundamental para procesar túneles VPN (IPsec, OpenVPN) de alta velocidad sin sobrecargar la CPU.
+    \item \textbf{Flexibilidad de Software:} Al ser un hardware "agnóstico", valida la estrategia de "futuras migraciones de software sin cambios físicos", evitando la dependencia de un solo proveedor (vendor lock-in).
+\end{itemize}
+
+\subsubsection{Plataforma de Software (NGFW)}
+El sistema operativo que se ejecutará sobre el hardware Protectli Vault es \textbf{\textit{OPNsense}}. Esta es una solución de firewall de código abierto basada en FreeBSD, lo que elimina completamente los costos de licenciamiento de software propietario.
+
+\textit{OPNsense} está orientado a dispositivos de red y proporciona una plataforma robusta para construir un \textbf{Firewall de Nueva Generación (NGFW)}.
+
+La justificación para la elección de OPNsense complementa al hardware:
+\begin{itemize}
+    \item \textbf{Capacidades NGFW Integradas:} Más allá de la inspección con estado (stateful inspection), OPNsense incluye de forma nativa (o con plugins) un Sistema de Prevención de Intrusos (IPS) basado en Suricata, filtrado de aplicaciones y capacidades de proxy web.
+    \item \textbf{Gestión Centralizada:} Como se observa en la Figura \ref{fig:opnsense}, proporciona una interfaz web moderna y fácil de usar para la gestión de todas las reglas, servicios de red (DHCP, DNS), VPNs y monitoreo de tráfico.
+    \item \textbf{Seguridad y Actualizaciones:} Cuenta con un ciclo de desarrollo activo, ofreciendo actualizaciones de seguridad semanales, lo que garantiza una rápida respuesta a nuevas vulnerabilidades.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{opnsense-screenshot}
+\caption{\textit{Interfaz de administración de OPNsense}}\label{fig:opnsense}
+\begin{flushleft}
+    \textit{Nota.} La interfaz facilita la gestión centralizada de reglas de firewall, monitoreo de sesiones y servicios auxiliares de red.
+\end{flushleft}
 \end{figure}
-Se utilizará como equipo el Protectli Vault 4 Port, con el cual, un equipo de bajo consumo de energía, y, que si en un futuro se necesita otro software de firewall, puede ser fácilmente configurado. Este será añadido a la cotización
